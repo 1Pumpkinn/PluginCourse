@@ -8,6 +8,10 @@ public final class PluginCourse extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
 
+        System.out.println("OUR PLUGIN IS WORKING");
+
+
+
     }
 
     @Override
