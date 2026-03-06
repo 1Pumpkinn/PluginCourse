@@ -6,3 +6,4 @@ authors: [PumpkinDev]
 
 commands:
   test:
+  testarg:

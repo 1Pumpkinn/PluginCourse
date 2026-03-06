@@ -11,6 +11,7 @@ public final class PluginCourse extends JavaPlugin {
         System.out.println("OUR PLUGIN IS WORKING");
 
         getCommand("test").setExecutor(new TestCommand());
+        getCommand("testarg").setExecutor(new TestArgumentCommand());
 
     }
 
