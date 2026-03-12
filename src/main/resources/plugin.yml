@@ -5,5 +5,4 @@ api-version: '1.21'
 authors: [PumpkinDev]
 
 commands:
-  test:
-  testarg:
+  config:

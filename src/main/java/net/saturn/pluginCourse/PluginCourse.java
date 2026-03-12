@@ -10,8 +10,11 @@ public final class PluginCourse extends JavaPlugin {
     public void onEnable() {
         System.out.println("OUR PLUGIN IS WORKING");
 
-        getCommand("test").setExecutor(new TestCommand());
-        getCommand("testarg").setExecutor(new TestArgumentCommand());
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
+        getCommand("config").setExecutor(new ConfigCommand(this));
+
 
     }
 
