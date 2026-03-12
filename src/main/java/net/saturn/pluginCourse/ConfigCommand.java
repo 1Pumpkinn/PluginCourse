@@ -5,6 +5,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.List;
+
 public class ConfigCommand implements CommandExecutor {
 
     private PluginCourse main;
@@ -20,16 +22,14 @@ public class ConfigCommand implements CommandExecutor {
     if (sender instanceof Player) {
         Player player = (Player) sender;
 
-        player.sendMessage(main.getConfig().getString("Word"));
-        player.sendMessage(main.getConfig().getInt("Number") + "");
+        main.getConfig().set("Word", "Cake");
 
-        if (main.getConfig().getBoolean("Boolean")) {
-            player.sendMessage("This feature is Enabled.");
-        }
+        List<String> list = main.getConfig().getStringList("String-list");
+        list.add("New value!");
+        main.getConfig().set("String-list", list);
 
-        for(String string : main.getConfig().getStringList("String-list")) {
-            player.sendMessage(string);
-        }
+        main.saveConfig();
+
     }
         return false;
     }
