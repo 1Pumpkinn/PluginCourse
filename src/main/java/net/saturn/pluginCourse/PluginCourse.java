@@ -10,7 +10,8 @@ public final class PluginCourse extends JavaPlugin {
     public void onEnable() {
         System.out.println("OUR PLUGIN IS WORKING");
 
-        getCommand("test").setExecutor(new TestCommand());
+        String[] strings = new String[]{"hello","there"};
+        String string = strings[2];
 
     }
 

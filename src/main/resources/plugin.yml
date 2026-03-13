@@ -3,6 +3,3 @@ version: '1.0-SNAPSHOT'
 main: net.saturn.pluginCourse.PluginCourse
 api-version: '1.21'
 authors: [PumpkinDev]
-
-commands:
-  test:
